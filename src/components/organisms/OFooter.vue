@@ -1,18 +1,18 @@
 <template>
   <footer>
     <OFooterTop />
-    <MFooterContent />
-    <MFooterBottom />
+    <OFooterContent />
+    <OFooterBottom />
   </footer>
 </template>
 
 <script>
-import MFooterBottom from "../molecules/MFooterBottom.vue";
-import MFooterContent from "../molecules/MFooterContent.vue";
+import OFooterBottom from "./OFooterBottom.vue";
+import OFooterContent from "./OFooterContent.vue";
 import OFooterTop from "./OFooterTop.vue";
 
 export default {
-  components: { OFooterTop, MFooterContent, MFooterBottom },
+  components: { OFooterTop, OFooterContent, OFooterBottom },
   name: "OFooter",
 };
 </script>
