@@ -64,13 +64,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/style/mixins";
+
 header {
+  background-color: #fff;
+
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(space-between);
     padding-block: var(--spacing-5);
-    background-color: #fff;
   }
 }
 </style>
