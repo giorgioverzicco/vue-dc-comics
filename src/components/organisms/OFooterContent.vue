@@ -157,7 +157,7 @@ export default {
   overflow: hidden;
 
   .container {
-    @include flex(start, start);
+    @include flex(flex-start, flex-start);
     flex-direction: column wrap;
     gap: var(--spacing-5);
     padding-block: var(--spacing-7);
