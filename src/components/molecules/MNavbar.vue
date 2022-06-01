@@ -30,8 +30,15 @@ export default {
     column-gap: var(--spacing-6);
     font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-sm);
     text-transform: uppercase;
     list-style-type: none;
+  }
+
+  &__item {
+    &:hover > * {
+      color: var(--clr-primary-400);
+    }
   }
 }
 </style>
