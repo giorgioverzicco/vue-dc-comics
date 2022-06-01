@@ -1,14 +1,16 @@
 <template>
   <div id="app">
     <OHeader />
+    <OMain />
   </div>
 </template>
 
 <script>
 import OHeader from "./components/organisms/OHeader.vue";
+import OMain from "./components/organisms/OMain.vue";
 export default {
   name: "App",
-  components: { OHeader },
+  components: { OHeader, OMain },
 };
 </script>
 
