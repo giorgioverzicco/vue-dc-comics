@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/style/mixins";
+@import "@/assets/style/mixins";
 
 header {
   background-color: #fff;

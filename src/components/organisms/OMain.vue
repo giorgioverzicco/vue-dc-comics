@@ -13,14 +13,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/style/mixins";
+@import "@/assets/style/mixins";
 
 main {
   color: var(--clr-secondary-050);
   background-color: var(--clr-secondary-900);
 
   .container {
-    @include flex(start);
+    @include flex(flex-start);
     padding-block: var(--spacing-8);
   }
 }
