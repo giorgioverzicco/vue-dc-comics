@@ -27,7 +27,8 @@ export default {
 .m-navbar {
   &__menu {
     display: flex;
-    column-gap: var(--spacing-6);
+    flex-wrap: wrap;
+    gap: var(--spacing-6);
     font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
     letter-spacing: var(--ls-sm);

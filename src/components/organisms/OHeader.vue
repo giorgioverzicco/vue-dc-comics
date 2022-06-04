@@ -71,6 +71,7 @@ header {
 
   .container {
     @include flex(space-between);
+    gap: var(--spacing-4);
     padding-block: var(--spacing-5);
   }
 }
