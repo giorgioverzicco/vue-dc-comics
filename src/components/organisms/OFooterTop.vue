@@ -69,6 +69,8 @@ export default {
 
   .container {
     @include flex(space-between);
+    flex-wrap: wrap;
+    row-gap: var(--spacing-6);
     padding-block: var(--spacing-8);
   }
 }
