@@ -24,7 +24,7 @@ export default {
   flex-direction: column;
   flex-wrap: wrap;
   gap: var(--spacing-3);
-  width: 8rem;
+  width: 10rem;
   text-decoration: none;
 
   &__thumbnail {
