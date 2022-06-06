@@ -1,20 +1,24 @@
 <template>
   <div class="o-currentSeries">
-    <MMovieCard
-      v-for="(serie, idx) in series"
-      :key="serie.series + idx"
-      url="#"
-      :thumb="serie.thumb"
-      :title="serie.series"
-    />
+    <div class="o-currentSeries__grid">
+      <MMovieCard
+        v-for="(serie, idx) in series"
+        :key="serie.series + idx"
+        url="#"
+        :thumb="serie.thumb"
+        :title="serie.series"
+      />
+    </div>
+    <AButton class="-primary -large -uppercase" text="Load more" />
   </div>
 </template>
 
 <script>
+import AButton from "../atoms/AButton.vue";
 import MMovieCard from "../molecules/MMovieCard.vue";
 export default {
   name: "OCurrentSeries",
-  components: { MMovieCard },
+  components: { MMovieCard, AButton },
   data() {
     return {
       series: [
@@ -109,9 +113,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/mixins";
+
 .o-currentSeries {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-5);
+  @include flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-5);
+  }
 }
 </style>
