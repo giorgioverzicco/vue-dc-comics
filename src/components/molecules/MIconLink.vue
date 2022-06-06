@@ -1,25 +1,20 @@
 <template>
   <a class="m-iconLink" :href="link.url">
     <AIcon :icon="icon" />
-    <AText :text="link.name" />
+    <ALink :link="link" />
   </a>
 </template>
 
 <script>
 import AIcon from "../atoms/AIcon.vue";
-import AText from "../atoms/AText.vue";
+import ALink from "../atoms/ALink.vue";
 
 export default {
-  components: { AIcon, AText },
+  name: "MIconLink",
+  components: { AIcon, ALink },
   props: {
-    link: {
-      type: Object,
-      required: true,
-    },
-    icon: {
-      type: Object,
-      required: true,
-    },
+    icon: Object,
+    link: Object,
   },
 };
 </script>
@@ -29,19 +24,8 @@ export default {
 
 .m-iconLink {
   @include flex(flex-start);
+  gap: var(--spacing-2);
+  color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
-
-  .a-text {
-    margin-left: var(--spacing-4);
-  }
-
-  .a-icon {
-    height: 3.5rem;
-  }
-
-  &:last-of-type .a-icon {
-    height: 2.5rem;
-  }
 }
 </style>

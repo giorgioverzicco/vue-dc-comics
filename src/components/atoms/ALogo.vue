@@ -7,9 +7,3 @@ export default {
   name: "ALogo",
 };
 </script>
-
-<style lang="scss" scoped>
-.a-logo {
-  height: 100%;
-}
-</style>

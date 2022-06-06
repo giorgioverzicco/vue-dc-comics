@@ -1,18 +1,18 @@
 <template>
   <div class="o-footerBottom">
     <div class="container">
-      <AButton class="-primary -uppercase" text="Sign-up now!" />
-      <MSocials />
+      <AButtonLink url="#" text="Sign-up now!" />
+      <OFooterSocials />
     </div>
   </div>
 </template>
 
 <script>
-import AButton from "../atoms/AButton.vue";
-import MSocials from "../molecules/MSocials.vue";
+import AButtonLink from "../atoms/AButtonLink.vue";
+import OFooterSocials from "./OFooterSocials.vue";
 export default {
-  components: { AButton, MSocials },
   name: "OFooterBottom",
+  components: { AButtonLink, OFooterSocials },
 };
 </script>
 
@@ -25,9 +25,11 @@ export default {
 
   .container {
     @include flex(space-between);
-    flex-wrap: wrap;
-    row-gap: var(--spacing-4);
     padding-block: var(--spacing-6);
+  }
+
+  .a-buttonLink {
+    text-transform: uppercase;
   }
 }
 </style>

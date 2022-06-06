@@ -1,17 +1,17 @@
 <template>
   <div class="o-footerContent">
     <div class="container">
-      <MLinkList v-for="(section, idx) in sections" :key="idx" :title="section.title" :links="section.links" />
+      <OFooterSection v-for="(sect, idx) in sections" :key="sect.title + idx" :title="sect.title" :links="sect.links" />
       <img src="@/assets/img/dc-logo-bg.png" alt="" />
     </div>
   </div>
 </template>
 
 <script>
-import MLinkList from "../molecules/MLinkList.vue";
+import OFooterSection from "./OFooterSection.vue";
 export default {
-  components: { MLinkList },
   name: "OFooterContent",
+  components: { OFooterSection },
   data() {
     return {
       sections: [
@@ -19,39 +19,39 @@ export default {
           title: "DC Comics",
           links: [
             {
-              name: "Characters",
+              title: "Characters",
               url: "#",
             },
             {
-              name: "Comics",
+              title: "Comics",
               url: "#",
             },
             {
-              name: "Movies",
+              title: "Movies",
               url: "#",
             },
             {
-              name: "TV",
+              title: "TV",
               url: "#",
             },
             {
-              name: "Games",
+              title: "Games",
               url: "#",
             },
             {
-              name: "Collectibles",
+              title: "Collectibles",
               url: "#",
             },
             {
-              name: "Videos",
+              title: "Videos",
               url: "#",
             },
             {
-              name: "Fans",
+              title: "Fans",
               url: "#",
             },
             {
-              name: "News",
+              title: "News",
               url: "#",
             },
           ],
@@ -60,11 +60,11 @@ export default {
           title: "Shop",
           links: [
             {
-              name: "Shop DC",
+              title: "Shop DC",
               url: "#",
             },
             {
-              name: "Shop DC Collectibles",
+              title: "Shop DC Collectibles",
               url: "#",
             },
           ],
@@ -73,43 +73,43 @@ export default {
           title: "DC",
           links: [
             {
-              name: "Terms Of Use",
+              title: "Terms Of Use",
               url: "#",
             },
             {
-              name: "Privacy policy (New)",
+              title: "Privacy policy (New)",
               url: "#",
             },
             {
-              name: "Advertising",
+              title: "Advertising",
               url: "#",
             },
             {
-              name: "Jobs",
+              title: "Jobs",
               url: "#",
             },
             {
-              name: "Subscriptions",
+              title: "Subscriptions",
               url: "#",
             },
             {
-              name: "Talent Workshops",
+              title: "Talent Workshops",
               url: "#",
             },
             {
-              name: "CPSC Certificates",
+              title: "CPSC Certificates",
               url: "#",
             },
             {
-              name: "Ratings",
+              title: "Ratings",
               url: "#",
             },
             {
-              name: "Shop Help",
+              title: "Shop Help",
               url: "#",
             },
             {
-              name: "Contact Us",
+              title: "Contact Us",
               url: "#",
             },
           ],
@@ -118,23 +118,23 @@ export default {
           title: "Sites",
           links: [
             {
-              name: "DC",
+              title: "DC",
               url: "#",
             },
             {
-              name: "MAD Magazine",
+              title: "MAD Magazine",
               url: "#",
             },
             {
-              name: "DC Kids",
+              title: "DC Kids",
               url: "#",
             },
             {
-              name: "DC Universe",
+              title: "DC Universe",
               url: "#",
             },
             {
-              name: "DC Power Visa",
+              title: "DC Power Visa",
               url: "#",
             },
           ],
@@ -146,21 +146,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/style/mixins";
-
 .o-footerContent {
   position: relative;
-  color: var(--clr-secondary-050);
-  background-color: var(--clr-primary-900);
   background-image: url("@/assets/img/footer-bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
 
   .container {
-    @include flex(flex-start, flex-start);
-    flex-direction: column wrap;
-    gap: var(--spacing-5);
-    padding-block: var(--spacing-7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-8);
+    padding-block: var(--spacing-6);
   }
 
   img {

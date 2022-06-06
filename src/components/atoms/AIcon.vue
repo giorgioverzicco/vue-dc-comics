@@ -1,21 +1,29 @@
 <template>
-  <img class="a-icon" :src="require(`@/assets/img/${icon.img}`)" :alt="icon.alt" />
+  <div class="a-icon">
+    <img :src="require(`@/assets/${icon.src}`)" :alt="icon.alt" />
+  </div>
 </template>
 
 <script>
 export default {
   name: "AIcon",
   props: {
-    icon: {
-      type: Object,
-      required: true,
-    },
+    icon: Object,
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/style/mixins";
+
 .a-icon {
-  height: 100%;
+  @include flex;
+  width: 4rem;
+  height: 4rem;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
 }
 </style>

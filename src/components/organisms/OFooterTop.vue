@@ -1,7 +1,7 @@
 <template>
-  <div class="o-footerTop">
+  <div class="o-stores">
     <div class="container">
-      <MIconLink v-for="(link, idx) in links" :key="idx" :link="link" :icon="link.icon" />
+      <MIconLink v-for="(link, idx) in links" :key="link.title + idx" :icon="link.icon" :link="link" />
     </div>
   </div>
 </template>
@@ -9,48 +9,48 @@
 <script>
 import MIconLink from "../molecules/MIconLink.vue";
 export default {
-  components: { MIconLink },
   name: "OFooterTop",
+  components: { MIconLink },
   data() {
     return {
       links: [
         {
-          name: "Digital Comics",
+          title: "Digital Comics",
           url: "#",
           icon: {
-            img: "buy-comics-digital-comics.png",
+            src: "img/buy-comics-digital-comics.png",
             alt: "icon",
           },
         },
         {
-          name: "DC Merchandise",
+          title: "DC Merchandise",
           url: "#",
           icon: {
-            img: "buy-comics-merchandise.png",
+            src: "img/buy-comics-merchandise.png",
             alt: "icon",
           },
         },
         {
-          name: "Subscription",
+          title: "Subscription",
           url: "#",
           icon: {
-            img: "buy-comics-subscriptions.png",
+            src: "img/buy-comics-subscriptions.png",
             alt: "icon",
           },
         },
         {
-          name: "Comic Shop Locator",
+          title: "Comic Shop Locator",
           url: "#",
           icon: {
-            img: "buy-comics-shop-locator.png",
+            src: "img/buy-comics-shop-locator.png",
             alt: "icon",
           },
         },
         {
-          name: "DC Power Visa",
+          title: "DC Power Visa",
           url: "#",
           icon: {
-            img: "buy-dc-power-visa.svg",
+            src: "img/buy-dc-power-visa.svg",
             alt: "icon",
           },
         },
@@ -63,15 +63,19 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/mixins";
 
-.o-footerTop {
+.o-stores {
   color: var(--clr-secondary-050);
   background-color: var(--clr-primary-500);
 
   .container {
     @include flex(space-between);
     flex-wrap: wrap;
-    row-gap: var(--spacing-6);
+    row-gap: var(--spacing-4);
     padding-block: var(--spacing-8);
+  }
+
+  .m-iconLink {
+    text-transform: uppercase;
   }
 }
 </style>

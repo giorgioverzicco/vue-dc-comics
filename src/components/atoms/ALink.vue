@@ -1,23 +1,19 @@
 <template>
-  <a class="a-link" :href="link.url">{{ link.name }}</a>
+  <a class="a-link" :href="link.url">{{ link.title }}</a>
 </template>
 
 <script>
 export default {
   name: "ALink",
   props: {
-    link: {
-      type: Object,
-      required: true,
-    },
+    link: Object,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .a-link {
-  display: inline-block;
-  color: var(--clr-secondary-600);
+  color: inherit;
   text-decoration: none;
 }
 </style>

@@ -1,61 +1,71 @@
 <template>
-  <header>
+  <header class="o-header">
     <div class="container">
       <ALogo />
-      <MNavbar :links="links" />
+      <ONavbar :links="links" />
     </div>
   </header>
 </template>
 
 <script>
 import ALogo from "../atoms/ALogo.vue";
-import MNavbar from "../molecules/MNavbar.vue";
+import ONavbar from "./ONavbar.vue";
 
 export default {
   name: "OHeader",
-  components: { MNavbar, ALogo },
+  components: { ALogo, ONavbar },
   data() {
     return {
       links: [
         {
-          name: "Characters",
+          title: "Characters",
           url: "#",
+          active: false,
         },
         {
-          name: "Comics",
+          title: "Comics",
           url: "#",
+          active: true,
         },
         {
-          name: "Movies",
+          title: "Movies",
           url: "#",
+          active: false,
         },
         {
-          name: "TV",
+          title: "TV",
           url: "#",
+          active: false,
         },
         {
-          name: "Games",
+          title: "Games",
           url: "#",
+          active: false,
         },
         {
-          name: "Collectibles",
+          title: "Collectibles",
           url: "#",
+          active: false,
         },
         {
-          name: "Videos",
+          title: "Videos",
           url: "#",
+          active: false,
         },
         {
-          name: "Fans",
+          title: "Fans",
           url: "#",
+          active: false,
         },
         {
-          name: "News",
+          title: "News",
           url: "#",
+          active: false,
         },
         {
-          name: "Shop",
+          title: "Shop",
           url: "#",
+          active: false,
         },
       ],
     };
@@ -66,13 +76,13 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/mixins";
 
-header {
+.o-header {
   background-color: #fff;
 
   .container {
     @include flex(space-between);
     gap: var(--spacing-4);
-    padding-block: var(--spacing-5);
+    padding-block: var(--spacing-4);
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="o-footer">
     <OFooterTop />
     <OFooterContent />
     <OFooterBottom />
@@ -12,9 +12,7 @@ import OFooterContent from "./OFooterContent.vue";
 import OFooterTop from "./OFooterTop.vue";
 
 export default {
-  components: { OFooterTop, OFooterContent, OFooterBottom },
   name: "OFooter",
+  components: { OFooterTop, OFooterContent, OFooterBottom },
 };
 </script>
-
-<style lang="scss" scoped></style>
