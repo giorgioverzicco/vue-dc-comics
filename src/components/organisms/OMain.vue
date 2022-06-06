@@ -15,7 +15,7 @@ import OCurrentSeries from "./OCurrentSeries.vue";
 
 export default {
   name: "OMain",
-  components: { AHero, ABadge, OCurrentSeries },
+  components: { AHero, OCurrentSeries, ABadge },
 };
 </script>
 
@@ -28,7 +28,8 @@ export default {
   .container {
     position: relative;
     @include flex(flex-start);
-    padding-block: var(--spacing-8);
+    padding-top: var(--spacing-7);
+    padding-bottom: var(--spacing-4);
   }
 
   h1 {
