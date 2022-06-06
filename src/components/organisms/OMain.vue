@@ -3,7 +3,7 @@
     <AHero />
     <div class="container">
       <ABadge content="Current Series" />
-      <h1>Content goes here!</h1>
+      <OCurrentSeries />
     </div>
   </main>
 </template>
@@ -11,10 +11,11 @@
 <script>
 import ABadge from "../atoms/ABadge.vue";
 import AHero from "../atoms/AHero.vue";
+import OCurrentSeries from "./OCurrentSeries.vue";
 
 export default {
   name: "OMain",
-  components: { AHero, ABadge },
+  components: { AHero, ABadge, OCurrentSeries },
 };
 </script>
 
@@ -37,9 +38,9 @@ export default {
   }
 
   .a-badge {
-    top: -25%;
+    position: absolute;
+    top: -1.5rem;
     left: 0;
-    transform: translateY(25%);
   }
 }
 </style>
