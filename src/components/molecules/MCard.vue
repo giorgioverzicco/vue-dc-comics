@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "MMovieCard",
+  name: "MCard",
   props: {
     url: String,
     thumb: String,

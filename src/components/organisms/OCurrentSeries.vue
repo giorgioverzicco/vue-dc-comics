@@ -1,7 +1,7 @@
 <template>
   <div class="o-currentSeries">
     <div class="o-currentSeries__grid">
-      <MMovieCard
+      <MCard
         v-for="(serie, idx) in series"
         :key="serie.series + idx"
         url="#"
@@ -15,10 +15,10 @@
 
 <script>
 import AButton from "../atoms/AButton.vue";
-import MMovieCard from "../molecules/MMovieCard.vue";
+import MCard from "../molecules/MCard.vue";
 export default {
   name: "OCurrentSeries",
-  components: { MMovieCard, AButton },
+  components: { MCard, AButton },
   data() {
     return {
       series: [
