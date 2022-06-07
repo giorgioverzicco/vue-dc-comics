@@ -123,6 +123,7 @@ export default {
   &__grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--spacing-5);
   }
 }
