@@ -1,7 +1,7 @@
 <template>
-  <a class="m-movieCard" :href="url">
-    <div class="m-movieCard__thumbnail" :style="{ backgroundImage: `url(${thumb})` }"></div>
-    <span class="m-movieCard__title">{{ title }}</span>
+  <a class="m-card" :href="url">
+    <img class="m-card__thumbnail" :src="thumb" alt="" />
+    <span class="m-card__title">{{ title }}</span>
   </a>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/mixins";
 
-.m-movieCard {
+.m-card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -30,9 +30,8 @@ export default {
   &__thumbnail {
     aspect-ratio: 1;
     width: 100%;
-    background-color: red;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
+    object-position: top;
   }
 
   &__title {
